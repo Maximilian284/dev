@@ -1,16 +1,15 @@
 import Lenis from 'lenis'
 
-let lenis
+let lenis : Lenis | null
 
 export function useLenis() {
   if (!lenis) {
     lenis = new Lenis({
-      smooth: true,
       lerp: 0.1,
     })
 
-    function raf(time) {
-      lenis.raf(time)
+    function raf(time: number) {
+      lenis!.raf(time)
       requestAnimationFrame(raf)
     }
     requestAnimationFrame(raf)
