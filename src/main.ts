@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import { useLenis } from '../src/plugins/lenis.js'
+import { useLenis } from './plugins/lenis.ts'
 
 import App from './App.vue'
 import router from './router'
